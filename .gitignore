@@ -1,0 +1,12 @@
+# IntelliJ Idea
+.idea/
+*.iml
+
+# Output folders
+out/
+bin/
+target/
+
+# OS files
+.DS_Store
+Thumbs.db
