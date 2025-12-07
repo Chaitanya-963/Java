@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class OperatorClass {
     public static void main(String[] args) {
 
@@ -39,8 +41,46 @@ public class OperatorClass {
 
         // ORDER OF OPERATORS [P-E-M-D-A-S]
 
-        double result = 3 + 4 * (7 - 5) / 2.0;
+//        double result = 3 + 4 * (7 - 5) / 2.0;
+//
+//        System.out.println(result);
 
-        System.out.println(result);
+
+        // Logical Operator
+
+//        && = AND
+//        || = OR
+//        ! = NOT
+//        double temp = -10;
+//        boolean isSunny = false;
+//
+//        if (temp <= 30 && temp >= 0 && isSunny) {
+//            System.out.println("The weather is GOOD 😎😎");
+//            System.out.println("It is sunny outside☀️");
+//        } else if (temp <= 30 && temp >= 0 && !isSunny) {
+//            System.out.println("The weather is GOOD 😎😎");
+//            System.out.println("It is cloudy outside☀🌧️");
+//        } else if (temp >= 30 || temp < 0) {
+//            System.out.println("The weather is bad 🙁");
+//        }
+//
+
+        Scanner scanner = new Scanner(System.in);
+
+        String username;
+
+        System.out.print("Enter your new username: ");
+        username = scanner.nextLine();
+
+        if (username.length() < 4 || username.length() > 12) {
+            System.out.println("Username must be between 4-12 characters");
+        } else if (username.contains(" ") || username.contains("_")) {
+            System.out.println("Username must not contain spaces and underscores");
+        } else {
+            System.out.printf("Welcome %s to platform", username);
+        }
+
+
+        scanner.close();
     }
 }
